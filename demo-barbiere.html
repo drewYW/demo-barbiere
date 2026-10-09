@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Barberia Ottone — Demo</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf8f4;--ink:#1d1f21;--muted:#6b6a66;--card:#fff;--line:#e6e1d6;--acc:#a8793a;--dark:#1d1f21;--onDark:#f5efe3;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141414;--ink:#f1ece2;--muted:#a09b90;--card:#1c1c1c;--line:#2d2d2d;--dark:#0b0b0b}}
+:root[data-theme="dark"]{--bg:#141414;--ink:#f1ece2;--muted:#a09b90;--card:#1c1c1c;--line:#2d2d2d;--dark:#0b0b0b}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.65 Inter,system-ui,sans-serif}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.15}
+.wrap{max-width:1040px;margin:auto;padding:0 22px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:12px;font:700 19px 'Playfair Display',serif;letter-spacing:.04em}
+.brand svg{width:44px;height:44px}
+.btn{display:inline-block;background:var(--acc);color:#fff;padding:12px 24px;border-radius:2px;text-decoration:none;font-weight:600;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
+.btn.o{background:none;color:var(--ink);border:1px solid var(--ink)}
+.hero{padding:76px 22px 64px;display:grid;gap:40px;grid-template-columns:1.1fr .9fr;align-items:center}
+.eyebrow{color:var(--acc);font-weight:600;font-size:13px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:16px}
+h1{font-size:clamp(34px,6vw,58px);margin-bottom:20px}
+.hero p{color:var(--muted);max-width:480px;margin-bottom:28px}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+.ph{background:linear-gradient(135deg,#d8cdb8,#b9a888);border-radius:3px;display:flex;align-items:center;justify-content:center;color:rgba(0,0,0,.35);font-size:12px;letter-spacing:.15em;text-transform:uppercase;min-height:120px}
+.hero .ph{aspect-ratio:4/5}
+section{padding:68px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(28px,4vw,38px);margin-bottom:10px}
+.sub{color:var(--muted);margin-bottom:36px;max-width:520px}
+.list{display:grid;gap:0 56px;grid-template-columns:1fr 1fr}
+.row{display:flex;justify-content:space-between;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+.row b{display:block;font-weight:600}.row small{color:var(--muted)}
+.row span{font:700 18px 'Playfair Display',serif;color:var(--acc)}
+.gal{display:grid;gap:12px;grid-template-columns:repeat(4,1fr)}
+.gal .ph{aspect-ratio:1}
+.gal .ph:nth-child(1),.gal .ph:nth-child(6){grid-column:span 2;aspect-ratio:2/1}
+.two{display:grid;gap:40px;grid-template-columns:1fr 1fr}
+.card{background:var(--card);border:1px solid var(--line);padding:28px;border-radius:3px}
+.card h3{font-size:22px;margin-bottom:14px}
+.hrs div{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed var(--line)}
+.band{background:var(--dark);color:var(--onDark);text-align:center;padding:72px 0;border:0}
+.band h2{margin-bottom:14px}.band p{color:#b9b2a3;margin-bottom:26px}
+footer{padding:30px 0;color:var(--muted);font-size:13px;text-align:center}
+@media(max-width:760px){.hero,.list,.two{grid-template-columns:1fr}.hero{padding-top:40px}.hero .ph{aspect-ratio:16/10}.gal{grid-template-columns:1fr 1fr}.gal .ph:nth-child(1),.gal .ph:nth-child(6){grid-column:span 2}.brand span{display:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<div class="brand">
+<svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="47" fill="#1d1f21" stroke="#a8793a" stroke-width="3"/><circle cx="50" cy="50" r="38" fill="none" stroke="#a8793a" stroke-width="1"/><text x="50" y="58" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="30" fill="#f5efe3">BO</text><text x="50" y="76" text-anchor="middle" font-family="Arial,sans-serif" font-size="7.5" letter-spacing="2" fill="#a8793a">1987</text><path d="M30 33h40" stroke="#a8793a" stroke-width="1.5"/></svg>
+<span>BARBERIA OTTONE</span></div>
+<a class="btn" href="#prenota">Prenota</a>
+</div></header>
+
+<main>
+<div class="wrap hero">
+<div>
+<div class="eyebrow">Barber shop · Dal 1987</div>
+<h1>Taglio, barba e<br>un po' di calma.</h1>
+<p>Una barberia di quartiere dove il tempo rallenta. Rasoio, forbici e quella cura che si nota quando esci dalla porta.</p>
+<div class="cta"><a class="btn" href="#prenota">Prenota un posto</a><a class="btn o" href="#servizi">Vedi il listino</a></div>
+</div>
+<div class="ph">Foto della barberia</div>
+</div>
+
+<section id="servizi"><div class="wrap">
+<h2>Servizi e prezzi</h2>
+<p class="sub">Un listino semplice, senza sorprese. Ogni servizio comprende lavaggio e rifinitura.</p>
+<div class="list">
+<div>
+<div class="row"><div><b>Taglio uomo</b><small>Forbici o macchinetta, a scelta</small></div><span>€16</span></div>
+<div class="row"><div><b>Barba</b><small>Rasoio, panno caldo e olio</small></div><span>€10</span></div>
+<div class="row"><div><b>Taglio + barba</b><small>Il classico completo</small></div><span>€24</span></div>
+</div>
+<div>
+<div class="row"><div><b>Rasatura a zero</b><small>Con panno caldo</small></div><span>€12</span></div>
+<div class="row"><div><b>Taglio ragazzo</b><small>Fino a 12 anni</small></div><span>€12</span></div>
+<div class="row"><div><b>Trattamento capelli</b><small>Anticaduta o purificante</small></div><span>€8</span></div>
+</div>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<h2>Il nostro spazio</h2>
+<p class="sub">Legno, specchi e luce calda. Qui trovi un posto dove sederti senza fretta.</p>
+<div class="gal"><div class="ph">Interno</div><div class="ph">Dettaglio</div><div class="ph">Taglio</div><div class="ph">Barba</div><div class="ph">Prodotti</div><div class="ph">Poltrona</div></div>
+</div></section>
+
+<section><div class="wrap two">
+<div class="card hrs"><h3>Orari</h3>
+<div><span>Lunedì</span><span>Chiuso</span></div>
+<div><span>Martedì – Venerdì</span><span>9:00 – 19:30</span></div>
+<div><span>Sabato</span><span>8:30 – 19:00</span></div>
+<div><span>Domenica</span><span>Chiuso</span></div></div>
+<div class="card"><h3>Dove siamo</h3>
+<p style="color:var(--muted)">Via Esempio 12<br>00000 Città (PR)</p><br>
+<p style="color:var(--muted)">Tel. 000 000 0000<br>WhatsApp 000 000 0000</p></div>
+</div></section>
+
+<section class="band" id="prenota"><div class="wrap">
+<h2>Ti aspettiamo in poltrona</h2>
+<p>Prenota con una chiamata o un messaggio. Ti rispondiamo in giornata.</p>
+<a class="btn" href="tel:0000000000">Chiama ora</a>
+</div></section>
+</main>
+<footer><div class="wrap">Demo di esempio · Nome, logo e dati di fantasia · Realizzata da Daniele</div></footer>
+</body>
+</html>
